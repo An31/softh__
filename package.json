@@ -1,0 +1,36 @@
+{
+  "name": "softh__",
+  "version": "1.0.0",
+  "description": "* clone repo from github => git clone https://github.com/An31/softh__.git\r * create a package.json => npm init -y\r * install express => npm install --save express\r * create a /public folder, fill it with /public/index.html\r * create a /server.js, fill it with a code.\r * see commit trial 1, \r   *start it using #node server.js in cmd,\r   *start it on local machine: localhost:3000\r   *start using heroku\r   + Configure heroku.\r    - # set nodejs on heroku\r    - nodejs version : node -v  => v6.9.4\r    - npm version : npm -v  => v3.10.10\r    - git version : git --version  => v2.8.1\r    - Delete app if you have more than 5 (go to app and settings and delete an app).\r    - Go through the link bellow\r    - link: https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/An31/softh__.git"
+  },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "keywords": [],
+  "author": "Anel Husakovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/An31/softh__/issues"
+  },
+  "homepage": "https://github.com/An31/softh__#readme",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "consolidate": "^0.15.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "kerberos": "~0.0.17",
+    "mongodb": "~2.0.33",
+    "mustache": "^2.3.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
+}

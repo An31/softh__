@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> {{title}} </title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"> </script>
+	<!--<script type="text/javascript"
+	src="mustache.js"></script> -->
+</head>
+<body>
+
+<div  style="float: right; margin-top: 80px; margin-right: 200px; padding: 100px; border: 1px solid #ccc" id="tweets"> 
+
+</div>
+  
+<h2> Add new post: </h2>
+<form method="post" action="/addData">
+	<textarea cols="50" id="newTweet" rows="10"  name="new_data"> 
+	</textarea>
+ 
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<b> Anel Husakovic
+
+<script type="mustache/x-tmpl" id="test">
+ <h1> Tweeted json data: </h1>
+ <h2> {{title}} </h2>
+ <ul>
+ {{#data}} 
+
+		 <li>{{text}}</li>
+
+ {{/data}}
+  {{^data}}
+	<li> There are no tweets ! </li>
+  {{/data}}
+ </ul> 
+ 
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(data){ 
+	  var template = $('#test').html();
+	  var result = Mustache.to_html(template, data); 
+	  
+	  $('#tweets').html(result);
+	});
+
+</script>
+</body>
+</html>
